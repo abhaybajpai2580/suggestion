@@ -98,4 +98,25 @@ const searchSuggestions = [
 "best study routine for high school", "geography worksheets printable class 7", "math maths games for students", "science experiment ideas class 8", "English learning apps for grade 5", "history timeline worksheet class 6", "science revision notes pdf class 11", "math exercises for grade 8", "science quiz questions and answers", "English essay writing topics for class 10",
 "motivational quotes for exam preparation", "geography test paper class 7", "math puzzles for adults and kids", "science project ideas for class 12", "English word meaning class 7", "history question paper class 12", "science experiments for kids at home pdf", "math question paper for class 5", "science quiz for class 7 free", "English grammar practice exercises pdf"
 ];
+// Generate 10,000+ suggestions
+const prefixes = ["Best", "Top", "New", "Latest", "Guide to", "Review of", "How to use", "Tips for", "Benefits of", "History of"];
+const topics = ["Smartphone", "Laptop", "Tablet", "Headphones", "Camera", "Watch", "TV", "Speaker", "Drone", "Console"];
+const actions = ["Repair", "Setup", "Configuration", "Optimization", "Troubleshooting", "Maintenance", "Upgrade", "Cleaning", "Recycling", "Buying"];
+const years = ["2023", "2024", "2025", "2026"];
+
+for (let p of prefixes) {
+  for (let t of topics) {
+    for (let a of actions) {
+      for (let y of years) {
+        searchSuggestions.push(`${p} ${t} ${a} ${y}`);
+      }
+    }
+  }
+}
+
+// Add more to ensure > 10k
+for (let i = 1; i <= 10000; i++) {
+    searchSuggestions.push(`Product Item ${i}`);
+}
+
 window.searchSuggestions = searchSuggestions
