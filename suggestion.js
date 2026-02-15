@@ -119,4 +119,30 @@ for (let i = 1; i <= 10000; i++) {
     searchSuggestions.push(`Product Item ${i}`);
 }
 
+// Generate 10,000+ more helpful suggestions (Health, Travel, Finance, etc.)
+const helpfulPrefixes = ["How to", "Best way to", "Tips for", "Guide to", "Benefits of", "Why is", "Where to find", "Cost of", "Review of", "Tutorial for"];
+const helpfulTopics = [
+    // Health & Wellness
+    "lose weight", "gain muscle", "reduce stress", "sleep better", "eat healthy", "cure headache", "lower blood pressure", "improve posture", "meditate daily", "do yoga",
+    // Travel & Places
+    "travel to Japan", "visit Paris", "book cheap flights", "find hotels in New York", "pack for vacation", "get a visa", "explore London", "hike in mountains", "camp safely", "rent a car",
+    // Finance & Money
+    "save money", "invest in stocks", "buy a house", "reduce taxes", "get a loan", "start a business", "budget effectively", "track expenses", "earn passive income", "retire early",
+    // Skills & Learning
+    "learn coding", "speak Spanish", "play guitar", "cook pasta", "fix a car", "write a resume", "ace an interview", "take better photos", "edit videos", "draw portraits",
+    // Home & Lifestyle
+    "clean the house", "organize closet", "decorate living room", "fix leaky faucet", "paint walls", "grow plants", "bake a cake", "make coffee", "train a dog", "plan a party",
+    // Technology
+    "fix wifi", "setup printer", "install windows", "backup data", "protect privacy", "code in python", "design a website", "edit pdf", "create app", "use excel"
+];
+const helpfulContexts = ["quickly", "efficiently", "at home", "for beginners", "without money", "professionally", "safely", "online", "in 2024", "in 2025", "step by step", "with examples", "fast", "cheaply", "easily", "safely", "today", "now", "free", "best practice"];
+
+for (let p of helpfulPrefixes) {
+  for (let t of helpfulTopics) {
+     for (let c of helpfulContexts) {
+        searchSuggestions.push(`${p} ${t} ${c}`);
+     }
+  }
+}
+
 window.searchSuggestions = searchSuggestions
